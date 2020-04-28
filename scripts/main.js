@@ -2,7 +2,7 @@ Events.on(EventType.ClientLoadEvent, run(() => {
     Core.app.post(run(() => {
         Core.app.post(run(() => {
             Core.app.post(run(() => {
-                Core.scene.getDialog().hide();
+                if(Core.scene.getDialog() != null) Core.scene.getDialog().hide();
             }));
         }));
     }));
