@@ -1,6 +1,6 @@
 const roll = method => new java.lang.Runnable(){run: method}
 
-Events.on(EventType.ClientLoadEvent, roll(() => {
+onEvent(ClientLoadEvent, () => {
     Core.app.post(roll(() => {
         Core.app.post(roll(() => {
             Core.app.post(roll(() => {
@@ -8,4 +8,4 @@ Events.on(EventType.ClientLoadEvent, roll(() => {
             }));
         }));
     }));
-}));
+});
